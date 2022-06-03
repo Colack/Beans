@@ -1,6 +1,7 @@
 import sys
 
 hasShown = False
+hasShown2 = False
 
 def main(): 
     if hasShown == False:
@@ -25,7 +26,7 @@ def main():
         print("\n")
         print("Example: (Beans code)")
         print("\n")
-        print("beans init (Start the beans program)")
+        print("beans init (Start a beans program)")
         print("beans create (Create a new file)")
         print("header I love beans (Create a header with the text I love beans)")
         print("print Beans are so cool (Add a line of text underneath the header)")
@@ -39,7 +40,61 @@ def main():
         main()
 
     elif user_input == "2":
-        print("")
+        print("Documentation")
+        if (hasShown2 == False):
+            print("Beans is a alternative to Markdown.")
+            print("It has many uses.")
+            print("It is essentially a Markdown/Text file, with extra features and tools you can use.")
+            print("Example: (Beans Code)")
+            print("\n")
+            print("beans init (Start a beans program)")
+            print("beans create (Create a new file.")
+            print("header I love beans (Create a header with the text I love beans)")
+            print("print Beans are so cool (Add a line of text underneath the header)")
+            print("console I love beans! (Log a line of text to the console)")
+            hasShown2 = True
+
+        else:
+            print("Welcome to the Beans Documentation!")
+        
+        print("\n")
+        print("\n")
+        print("\n")
+        print("1. A Introduction to Beans")
+        print("2. A Quick Start Guide")
+        print("3. A Quick Start Guide (2)")
+        print("4. Different uses with Beans")
+        print("5. Compiling Beans to .md and .txt")
+        print("6. Further Documentation")
+        print("7. Extra Features and Notes")
+        print("8 Final Notes")
+        print("9. Acknowledgements")
+        print("10. License")
+        print("11. Credits")
+        print("12. Exit")
+        print("\n")
+        user_input2 = input("Please enter a number: ")
+
+        if user_input2 == "1":
+            print("\n")
+        
+        elif user_input2 == "2":
+            print("\n")
+
+        elif user_input2 == "3":
+            print("\n")
+
+        elif user_input2 == "4":
+            print("\n")
+
+        elif user_input2 == "5":
+            print("\n")
+
+        elif user_input2 == "6":
+            print("\n")
+
+        elif user_input2 == "7":
+            print("\n")
 
     elif user_input == "3":
         sys.exit()
