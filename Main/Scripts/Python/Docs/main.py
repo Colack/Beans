@@ -1,4 +1,5 @@
 import sys
+import docsStuff
 
 hasShown = False
 hasShown2 = False
@@ -73,10 +74,11 @@ def main():
         print("11. Credits")
         print("12. Exit")
         print("\n")
+
         user_input2 = input("Please enter a number: ")
 
         if user_input2 == "1":
-            print("\n")
+            docsStuff.intro()
         
         elif user_input2 == "2":
             print("\n")
@@ -95,6 +97,21 @@ def main():
 
         elif user_input2 == "7":
             print("\n")
+
+        elif user_input2 == "8":
+            print("\n")
+
+        elif user_input2 == "9":
+            print("\n")
+
+        elif user_input2 == "10":
+            print("\n")
+
+        elif user_input2 == "11":
+            print("\n")
+
+        elif user_input2 == "12":
+            sys.exit()
 
     elif user_input == "3":
         sys.exit()
