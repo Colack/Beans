@@ -3,7 +3,7 @@
 Beans is not Markdown!
 ```
 Create **Markdown** files easily with Beans, with easy keywords to memorize.   
-The creation of **Markdown** files has never been the same.   
+The creation of **Markdown** files will never be hard again. 
 ## Usage
 ```javascript
 beans init // Create a new beans file.
