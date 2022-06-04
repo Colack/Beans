@@ -12,6 +12,9 @@ const Email = "UniformKitten281@gmail.com"
 const Version = "0.0.1"
 const ErrorLog = "====== Error Logging ======"
 
+var i = 0
+var errTrue = false
+
 func main() {
 	args := os.Args[1:]
 
@@ -55,13 +58,72 @@ func run(filePath string) {
 
 	readFile.Close()
 
-	for _, line := range fileLines {
+	if fileLines[0] == "beans init" {
+		if fileLines[1] == "beans create" {
+			if _, err := os.Stat("main.beans"); err == nil {
+				fmt.Println("main.beans already exists.")
+			} else {
+				f, err := os.Create("main.beans")
+				if err != nil {
+					fmt.Println(err)
+				}
+				defer f.Close()
+				for i := 0; i < len(fileLines); i++ {
+					f.WriteString(fileLines[i] + "\n")
+				}
+				for i := 1; i < len(fileLines); i++ {
+					if fileLines[i] == "beans init" {
+						fmt.Println("You have already initialized this file.")
+						errTrue = true
+					}
+				}
+				if errTrue == false {
+					for _, line := range fileLines {
 
-		if strings.HasPrefix(line, "//") {
-			continue
-		} else if strings.HasPrefix(line, "display") {
-			fmt.Println(line)
+						if strings.HasPrefix(line, "//") {
+							continue
+						} else if strings.HasPrefix(line, "console") {
+							fmt.Println("Console: " + line)
+						} else if strings.HasPrefix(line, "header") {
+							fmt.Println("====== " + line + " ======")
+						} else if strings.HasPrefix(line, "print") {
+							fmt.Println(line)
+						}
+					}
+				} else {
+					fmt.Println("ERR: You have already initialized this file.")
+					fmt.Println("Use \"go run main.go help\" for more information.")
+				}
+			}
+
+		} else {
+			for i := 1; i < len(fileLines); i++ {
+				if fileLines[i] == "beans init" {
+					fmt.Println("You have already initialized this file.")
+					errTrue = true
+				}
+			}
+			if errTrue == false {
+				for _, line := range fileLines {
+
+					if strings.HasPrefix(line, "//") {
+						continue
+					} else if strings.HasPrefix(line, "console") {
+						fmt.Println("Console: " + line)
+					} else if strings.HasPrefix(line, "header") {
+						fmt.Println("====== " + line + " ======")
+					} else if strings.HasPrefix(line, "print") {
+						fmt.Println(line)
+					}
+				}
+			} else {
+				fmt.Println("ERR: You have already initialized this file.")
+				fmt.Println("Use \"go run main.go help\" for more information.")
+			}
 		}
+	} else {
+		fmt.Println("ERR: This is not a beans file.")
+		fmt.Println("Use \"go run main.go help\" for more information.")
 	}
 }
 
