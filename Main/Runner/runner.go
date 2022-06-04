@@ -23,12 +23,27 @@ func runner(filePath string) {
 
 	readFile.Close()
 
-	for _, line := range fileLines {
-
-		if strings.HasPrefix(line, "//") {
-			continue
-		} else if strings.HasPrefix(line, "display") {
-			fmt.Println(line)
+	for i := 1; i < len(fileLines); i++ {
+		if fileLines[i] == "beans init" {
+			fmt.Println("You have already initialized this file.")
+			errTrue = true
 		}
+	}
+	if errTrue == false {
+		for _, line := range fileLines {
+
+			if strings.HasPrefix(line, "//") {
+				continue
+			} else if strings.HasPrefix(line, "console") {
+				fmt.Println("Console: " + line)
+			} else if strings.HasPrefix(line, "header") {
+				fmt.Println("====== " + line + " ======")
+			} else if strings.HasPrefix(line, "print") {
+				fmt.Println(line)
+			}
+		}
+	} else {
+		fmt.Println("ERR: You have already initialized this file.")
+		fmt.Println("Use \"go run main.go help\" for more information.")
 	}
 }
