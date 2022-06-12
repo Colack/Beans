@@ -12,4 +12,4 @@ print You can even clear the screen!
 wait 3
 clear
 wait 0.5
-print Impresive, right?
+print Impressive, right?
