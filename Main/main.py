@@ -48,6 +48,8 @@ def getFileInput():
                     continue
                 else:
                     return "Invalid library"
+            elif line.startswith("clear"):
+                os.system("cls" if os.name == "nt" else "clear")
             else:
                 return "Invalid line"
             if timeStarted == False:
