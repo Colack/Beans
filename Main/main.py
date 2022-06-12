@@ -18,6 +18,8 @@ keywords = [
 ]
 timeStarted = False
 fileType = ""
+version = "1.0"
+manager = "Colack"
 
 def getFileInput():
     fileName = input("Enter file name: ")
@@ -62,73 +64,63 @@ def getFileInput():
         return getFileInput()
 
 def main():
-    print("Beans V1.0")
+    print("Beans V" + version)
     print("Type ':help' for help")
     x = input("> ")
     if (x == ":help"):
-        print("x")
+        print("Beans is a simple system for creating readme files.")
+        time.sleep(0.1)
+        print("It is a simple language with a very small syntax.")
+        time.sleep(0.1)
+        print("Shell Commands: ")
+        time.sleep(0.1)
+        print(":help - Displays this help message")
+        time.sleep(0.1)
+        print(":exit - Exits the program")
+        time.sleep(0.1)
+        print(":run - Runs a file")
+        time.sleep(0.1)
+        print(":clear - Clears the screen")
+        time.sleep(0.1)
+        print(":version - Displays the version of the program")
+        time.sleep(0.1)
+        print(":license - Displays the license of the program")
+        time.sleep(0.1)
+        print(":credits - Displays the credits of the program")
+        time.sleep(0.1)
+        print(":libs - Displays all libraries to use")
+        time.sleep(0.1)
+        main()
     elif (x == ":exit"):
         sys.exit()
     elif (x == ":clear"):
         os.system("cls" if os.name == "nt" else "clear")
+        time.sleep(0.1)
+        main()
     elif (x == ":run"):
         getFileInput()
     elif (x == ":libs"):
         print("Included libraries:")
         for lib in libs:
             print(lib)
-        for file in os.listdir('.'):
-            if file.startswith("!"):
-                print(file[1:])
-            else:
-                continue
-    elif (x == ":beans"):
-        choiceStuff()
+        main()
+    elif (x == ":version"):
+        print("Beans V" + version)
+        time.sleep(1)
+        main()
+    elif (x == ":license"):
+        print("Beans is licensed under the MIT license.")
+        time.sleep(1)
+        main()
+    elif (x == ":credits"):
+        print("Beans was created by Colack.")
+        print("It is currently managed by " + manager)
+        time.sleep(1)
+        main()
     else:
         print("Invalid command")
+        print("Use ':help' for help")
+        time.sleep(1)
         main()
-
-def choiceStuff():
-     while True:
-        os.system("cls" if os.name == "nt" else "clear")
-        print("1. Interpreter")
-        print("2. Compiler")
-        print("3. Exit")
-        choice = input("> ")
-        if choice == "1":
-            getFileInput()
-        elif choice == "2":
-            print("Compiler")
-        elif choice == "3":
-            sys.exit()
-        else:
-            print("Invalid choice")
-            print("Use ':help' for help")
-            time.sleep(1)
-            main()
-
-def compiler():
-    file = input("Enter file name: ")
-    file.open(file, "r")
-    if file.readline().startswith("Beans!"):
-        print("File cannot be a beans file.")
-        print("Try Beans, Markdown, or a text file.")
-    elif file.readline().startswith("Md!") or file.readline().startswith("MD!") or file.readline().startswith("md!"):
-        fileType = "md"
-    elif file.readline().startswith("Txt!") or file.readline().startswith("txt!") or file.readline().startswith("TXT!"):
-        fileType = "txt"
-    else:
-        print("Invalid file type.")
-        print("Try Beans, Markdown, or a text file.")
-        main()
-
-    # Make a new file with the same name as the original
-    f = open(file + "." + fileType, "w")
-    
-    
-
-
-        
-
 
 main()
