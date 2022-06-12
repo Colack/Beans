@@ -2,7 +2,7 @@ Beans!
 : Beans readme
 header Welcome to Beans!
 wait 3
-print Beans is the future replacement for readme files.
+print Beans is the replacement for README files.
 wait 0.5
 print You can wait,
 wait 5
