@@ -1,0 +1,15 @@
+Beans!
+: Beans readme
+header Welcome to Beans!
+wait 3
+print Beans is the future replacement for readme files.
+wait 0.5
+print You can wait,
+wait 5
+print You can make comments, with the keyword :
+wait 3
+print You can even clear the screen!
+wait 3
+clear
+wait 0.5
+print Impresive, right?
