@@ -1,2 +1,2 @@
 # DynamicSaur
-Dynamic checking and error logging for beans.
+Dynamic libraries for Beans
