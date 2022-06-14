@@ -50,3 +50,5 @@ def getBtype():
     except FileNotFoundError:
         print("Invalid file")
         getBtype()
+
+getBtype()
