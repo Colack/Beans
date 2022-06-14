@@ -25,6 +25,12 @@ def getFileInput():
     fileName = input("Enter file name: ")
     try:
         file = open(fileName, "r")
+        if (fileName.endswith(".beans")):
+            time.sleep(0.1)
+        else:
+            print("Invalid file type")
+            time.sleep(1)
+            getFileInput()
         if file.readline().startswith("Beans!"):
             os.system("cls" if os.name == "nt" else "clear")
         else:
@@ -63,7 +69,7 @@ def getFileInput():
 
     except FileNotFoundError:
         print("File not found")
-        return getFileInput()
+        getFileInput()
 
 def main():
     print("Beans V" + version)
