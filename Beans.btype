@@ -1,4 +1,10 @@
 Btype!
 title Beans
+author Colack
+manager Colack
 description Create Dynamic README files.
+version 1.0
+keywords beans language readme python
+libs sys os time
 main README.beans
+end
