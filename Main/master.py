@@ -21,6 +21,32 @@ timeStarted = False
 fileType = ""
 version = "1.0"
 manager = "Colack"
+manager2 = "Colack"
+
+def dynamic():
+    print("== DynamicSaur ==")
+    print("1. Libraries")
+    print("2. Info")
+    print("3. Exit")
+    x = input("> ")
+    if (x == 1):
+        print("pun")
+        print("A simple library for making if-statements and variables.")
+        time.sleep(1)
+        print("beans2")
+        print("The original Beans! interpreter, with better keywords and easy to use tools.")
+        time.sleep(1)
+        print("skel")
+        print("Generate 'skeleton' templates, with prefabs and simple ways to make your Beans! file yours.")
+        time.sleep(1)
+        dynamic()
+    elif (x == 2):
+        print("DynamicSaur is a offset/tool of Beans!")
+        print("Coded by Colack")
+        print("Managed by " + manager2)
+        dynamic()
+    else:
+        sys.exit()
 
 def getFileInput():
     fileName = input("Enter file name: ")
@@ -223,6 +249,9 @@ def choices():
         print(":gen - Opens up the Generation program.")
         time.sleep(0.1)
         print(":btype - Opens up the Btype program.")
+        time.sleep(0.1)
+        print(":dyna - Boots up the DynamicSaur libraries program.")
+        choices()
     elif (x == ":main"):
         main()
     elif (x == ":exit"):
@@ -231,8 +260,11 @@ def choices():
         getGenInput()
     elif (x == ":btype"):
         getBtype()
+    elif (x == ":dyna"):
+        dynamic()
     else:
         print("Invalid command")
         print("Use ':help' for help")
         choices()
     
+choices()
