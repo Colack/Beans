@@ -98,6 +98,7 @@ def main():
         time.sleep(0.1)
         print(":libs - Displays all libraries to use")
         time.sleep(0.1)
+        print(":build - Displays the build of the program")
         main()
     elif (x == ":exit"):
         sys.exit()
@@ -125,6 +126,9 @@ def main():
         print("It is currently managed by " + manager)
         time.sleep(1)
         main()
+    elif (x == ":build"):
+        print("Beans Zen Build")
+        time.sleep(1)
     else:
         print("Invalid command")
         print("Use ':help' for help")
