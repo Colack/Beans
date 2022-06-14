@@ -1,2 +1,1 @@
-# Generation
-Installer and Updater for Beans.
+# Generation Checking for Beans
