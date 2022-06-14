@@ -1,1 +1,2 @@
-# Generation Checking for Beans
+# Generation
+Build and Version checking for beans projects
