@@ -251,8 +251,10 @@ def choices():
         print(":btype - Opens up the Btype program.")
         time.sleep(0.1)
         print(":dyna - Boots up the DynamicSaur libraries program.")
-        choices()
+        time.sleep(0.1)
         print(":dotbeans - Boots up the DotBeans program.")
+        time.sleep(0.1)
+        print(":credits - Displays the credits of the program.")
     elif (x == ":main"):
         main()
     elif (x == ":exit"):
@@ -265,6 +267,8 @@ def choices():
         dynamic()
     elif (x == ":dotbeans"):
         dotbeans()
+    elif (x == ":credits"):
+        cred()
     else:
         print("Invalid command")
         print("Use ':help' for help")
@@ -310,4 +314,13 @@ def dotbeans():
     print(".btype file created.")
     print("Finished!")
   
+def cred():
+    print("Credits: ")
+    print("Concept by Colack")
+    print("\n")
+    print("Contributors: ")
+    print("Colack")
+    print("Managed by " + manager + ".")
+    x = input("Press anything to continue.")
+
 choices()
