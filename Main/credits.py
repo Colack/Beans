@@ -4,7 +4,8 @@ import sys
 import os 
 import time
 
-manager = ""
+# Put your name here in the manager variable.
+manager = "Colack"
 
 def main():
     print("Credits: ")
@@ -12,8 +13,6 @@ def main():
     print("\n")
     print("Contributors: ")
     print("Colack")
-    # Put your name here
-    print("Managed by " + manager = ".")
+    print("Managed by " + manager + ".")
     x = input("Press anything to continue.")
-    
 main()
