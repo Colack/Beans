@@ -22,16 +22,13 @@ def main():
     if user_input == "1":
         print("README")
         print("Beans is not Markdown!")
-        print("Create Markdown files easily with Beans, with easy keywords to memorize.")
-        print("The creation of Markdown files will never be hard again!")
+        print("The creation of README files has never been simpler!")
         print("\n")
         print("Example: (Beans code)")
         print("\n")
-        print("beans init (Start a beans program)")
-        print("beans create (Create a new file)")
+        print("Beans! (Start a beans program)")
         print("header I love beans (Create a header with the text I love beans)")
         print("print Beans are so cool (Add a line of text underneath the header)")
-        print("console I love beans! (Log a line of text to the console)")
         print("\n")
         print("The output of the above code will look like this:")
         print("\n")
@@ -48,11 +45,9 @@ def main():
             print("It is essentially a Markdown/Text file, with extra features and tools you can use.")
             print("Example: (Beans Code)")
             print("\n")
-            print("beans init (Start a beans program)")
-            print("beans create (Create a new file.")
+            print("Beans! (Start a beans program)")
             print("header I love beans (Create a header with the text I love beans)")
             print("print Beans are so cool (Add a line of text underneath the header)")
-            print("console I love beans! (Log a line of text to the console)")
             hasShown2 = True
 
         else:
@@ -65,14 +60,13 @@ def main():
         print("2. A Quick Start Guide")
         print("3. A Quick Start Guide (2)")
         print("4. Different uses with Beans")
-        print("5. Compiling Beans to .md and .txt")
-        print("6. Further Documentation")
-        print("7. Extra Features and Notes")
-        print("8 Final Notes")
-        print("9. Acknowledgements")
-        print("10. License")
-        print("11. Credits")
-        print("12. Exit")
+        print("5. Further Documentation")
+        print("6. Extra Features and Notes")
+        print("7 Final Notes")
+        print("8. Acknowledgements")
+        print("9. License")
+        print("10. Credits")
+        print("11. Exit")
         print("\n")
 
         user_input2 = input("Please enter a number: ")
@@ -108,10 +102,7 @@ def main():
             print("\n")
 
         elif user_input2 == "11":
-            print("\n")
-
-        elif user_input2 == "12":
-            sys.exit()
+            sys.exit(1)
 
     elif user_input == "3":
         sys.exit()
