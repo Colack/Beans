@@ -4,10 +4,9 @@ import sys
 import os
 import time
 
+# Libraries will be added in a later update
 libs = [
-    "pun",
-    "beans2",
-    "skel"
+    ""
 ]
 keywords = [
     ":",
@@ -56,6 +55,18 @@ def getFileInput():
                     return "Invalid library"
             elif line.startswith("clear"):
                 os.system("cls" if os.name == "nt" else "clear")
+            elif line.startswith("table"):
+                x = line[6:]
+                if x.startswith("start"):
+                    print("|=|")
+                elif x.startswith("end"):
+                    print("|=|")  
+                elif x.startswith("line"):
+                    print("---")
+            elif line.startswith("line"):
+                print("-----")
+            elif line.startswith("bold"):
+                print("\033[1m" + line[7:] + "\033[0m", end="")
             else:
                 return "Invalid line"
             if timeStarted == False:
